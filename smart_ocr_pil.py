@@ -382,7 +382,7 @@ def main():
     """Test the smart OCR on first few pages"""
     
     pdf_path = r'c:\cod\licenta\Paraschiv 1979 - Ro oil _ gas fields STE_Seria_A_vol_13.pdf'
-    output_dir = r'c:\cod\licenta\smart_ocr_results'
+    output_dir = r'c:\cod\licenta\smart_ocr_results_pil'
     
     print("\n" + "="*80)
     print("SMART OCR TEST - First 5 Pages")
@@ -421,7 +421,7 @@ if __name__ == "__main__":
     
     if '--full' in sys.argv:
         pdf_path = r'c:\cod\licenta\Paraschiv 1979 - Ro oil _ gas fields STE_Seria_A_vol_13.pdf'
-        output_dir = r'c:\cod\licenta\smart_ocr_results'
+        output_dir = r'c:\cod\licenta\smart_ocr_results_pil'
         
         print("\n🚀 FULL EXTRACTION MODE")
         print("This will process ALL pages in the PDF...\n")
