@@ -1,111 +1,39 @@
 """
-Romanian OCR Post-Processor
-Automatically corrects common OCR errors in Romanian text
-Logs all corrections for manual review
+Romanian OCR Post-Processor - CONSERVATIVE VERSION
+Only corrects EXACT matches of known OCR errors
+No fuzzy matching that could change legitimate words
 """
 
 import re
-from difflib import SequenceMatcher
 from collections import defaultdict
 
 
 class RomanianCorrector:
     """
-    Post-OCR correction for Romanian geographical and geological text
-    Uses pattern matching and known corrections to fix common errors
+    Conservative OCR correction - ONLY fixes exact known errors
+    Will NOT change legitimate words like 'deposits', 'consists', etc.
     """
     
     def __init__(self):
-        # Known Romanian place names with their common OCR misreadings
-        self.place_corrections = {
-            'dimbovita': 'Dambovita',
-            'dambovita': 'Dambovita',
-            'caransebes': 'Caransebes',
-            'qaransebes': 'Caransebes',
-            'qoaransebes': 'Caransebes',
-            'oaransebes': 'Caransebes',
-            'ploiesti': 'Ploiesti',
-            'bucuresti': 'Bucuresti',
-            'timisoara': 'Timisoara',
-            'brasov': 'Brasov',
-            'constanta': 'Constanta',
-            'targoviste': 'Targoviste',
-            'tirgoviste': 'Targoviste',
-            'buzau': 'Buzau',
-            'bacau': 'Bacau',
-            'galati': 'Galati',
-            'birlad': 'Barlad',
-            'moinesti': 'Moinesti',
-            'tescani': 'Tescani',
-            'lucacesti': 'Lucacesti',
-            'pacureti': 'Pacureti',
-            'tazlaul': 'Tazlaul',
-            'sarmasel': 'Sarmasel',
-            'hateg': 'Hateg',
-            'petrosani': 'Petrosani',
-            'ciucurilor': 'Ciucurilor',
-            'beius': 'Beius',
-            'mures': 'Mures',
-            'oltenia': 'Oltenia',
-            'muntenia': 'Muntenia',
-            'moldova': 'Moldova',
-            'moldavia': 'Moldova',
-            'transylvania': 'Transilvania',
-            'transilvania': 'Transilvania',
-            'dobrogea': 'Dobrogea',
-            'mosoare': 'Mosoare',
-            'pacura': 'Pacura',
-            'gaiceana': 'Gaiceana',
-            'glavanesti': 'Glavanesti',
-            'murgeni': 'Murgeni',
-        }
+        # ONLY exact OCR errors - these are words that are NEVER correct
+        # Maps: wrong OCR reading -> correct word
         
-        # Romanian person names (geologists, scientists)
-        self.person_corrections = {
+        self.exact_corrections = {
+            # === PLACE NAMES (exact OCR misreads) ===
+            'qoaransebes': 'Caransebes',
+            'qaransebes': 'Caransebes',
+            'oaransebes': 'Caransebes',
+            
+            # === PERSON NAMES (exact OCR misreads) ===
             'grigorasg': 'Grigoras',
             'grigorass': 'Grigoras',
             'grigorag': 'Grigoras',
-            'cobilcescu': 'Cobilcescu',
-            'mrazec': 'Mrazec',
             'mrazeec': 'Mrazec',
-            'paraschiv': 'Paraschiv',
-            'murgoei': 'Murgoci',
-            'murgoci': 'Murgoci',
-            'vancea': 'Vancea',
-            'ciupagea': 'Ciupagea',
             'oiupagea': 'Ciupagea',
-            'atanasiu': 'Atanasiu',
-            'teisseyre': 'Teisseyre',
-            'botez': 'Botez',
-            'sandulescu': 'Sandulescu',
-            'dumitrescu': 'Dumitrescu',
-            'stefanescu': 'Stefanescu',
-            'bogdanof': 'Bogdanov',
-            'preda': 'Preda',
-            'cantemir': 'Cantemir',
-        }
-        
-        # Geological terms commonly misread
-        self.geological_corrections = {
+            
+            # === GEOLOGICAL TERMS (exact OCR misreads) ===
             'erystalline': 'crystalline',
             'crystailine': 'crystalline',
-            'schits': 'schists',
-            'shists': 'schists',
-            'sehists': 'schists',
-            'flyseh': 'flysch',
-            'geosynclinex': 'geosynclines',
-            'anticlins': 'anticlines',
-            'banatites': 'banatites',
-            'granodiorites': 'granodiorites',
-            'diabases': 'diabases',
-            'palaeozoic': 'Paleozoic',
-            'paleozic': 'Paleozoic',
-            'mesozic': 'Mesozoic',
-            'mesozoie': 'Mesozoic',
-            'cretaceoous': 'Cretaceous',
-            'cretaeeous': 'Cretaceous',
-            'jurassie': 'Jurassic',
-            'triassie': 'Triassic',
             'hydroearbons': 'hydrocarbons',
             'hydrocarbonx': 'hydrocarbons',
             'petroleun': 'petroleum',
@@ -113,40 +41,19 @@ class RomanianCorrector:
             'petrolem': 'petroleum',
             'voleanoes': 'volcanoes',
             'voleanic': 'volcanic',
+            'schits': 'schists',  # Only this exact misspelling
+            'shists': 'schists',
+            'sehists': 'schists',
+            'flyseh': 'flysch',
+            'geosynclinex': 'geosynclines',
+            'anticlins': 'anticlines',
+            
+            # === INCOMPLETE WORDS (clear OCR truncation) ===
+            # Only very specific cases where it's clearly an error
         }
         
-        # Incomplete/truncated words (OCR cut-off errors)
-        self.incomplete_corrections = {
-            'oi': 'oil',
-            'oI': 'oil',
-            'oIl': 'oil',
-            'oii': 'oil',
-            'oll': 'oil',
-            'ol': 'oil',
-            'gAs': 'gas',
-            'GAs': 'GAS',
-            'gaS': 'gas',
-            'petroleu': 'petroleum',
-            'petrole': 'petroleum',
-            'geolog': 'geology',
-            'geologica': 'geological',
-            'formatio': 'formation',
-            'depositio': 'deposition',
-            'accumulatio': 'accumulation',
-            'exploitatio': 'exploitation',
-            'extractio': 'extraction',
-            'explorati': 'exploration',
-            'carpath': 'Carpathian',
-            'carpathia': 'Carpathian',
-        }
-        
-        # Common multi-word phrase corrections
+        # Phrase corrections - hyphenated word breaks from line endings
         self.phrase_corrections = {
-            'oi and gas': 'oil and gas',
-            'oil and gAs': 'oil and gas',
-            'oIl and gas': 'oil and gas',
-            'OI AND GAS': 'OIL AND GAS',
-            'OI AND GAs': 'OIL AND GAS',
             'for- mations': 'formations',
             'for- mation': 'formation',
             'forma- tions': 'formations',
@@ -162,101 +69,68 @@ class RomanianCorrector:
             'colla- borate': 'collaborate',
             'men- tioning': 'mentioning',
             'Promon- tory': 'Promontory',
+            'Car- pathians': 'Carpathians',
+            'Car- pathian': 'Carpathian',
+            'crystal- line': 'crystalline',
+            'Transyl- vanian': 'Transylvanian',
+            'Meso- zoic': 'Mesozoic',
+            'Paleo- zoic': 'Paleozoic',
+            'Creta- ceous': 'Cretaceous',
         }
         
-        # Build combined dictionary
-        self.all_corrections = {}
-        for d in [self.place_corrections, self.person_corrections, 
-                  self.geological_corrections, self.incomplete_corrections]:
-            for k, v in d.items():
-                self.all_corrections[k.lower()] = v
-        
-        # Track corrections made
+        # Track corrections
         self.correction_log = []
         self.stats = defaultdict(int)
     
-    def similarity(self, a, b):
-        """Calculate string similarity ratio"""
-        return SequenceMatcher(None, a.lower(), b.lower()).ratio()
-    
-    def find_best_correction(self, word, threshold=0.7):
-        """Find the best correction for a word based on similarity"""
-        word_clean = word.lower().strip('.,;:!?"\'()[]')
-        
-        # Direct match
-        if word_clean in self.all_corrections:
-            return self.all_corrections[word_clean], 1.0
-        
-        # Fuzzy match
-        best_match = None
-        best_score = 0
-        
-        for known, correction in self.all_corrections.items():
-            score = self.similarity(word_clean, known)
-            if score > best_score and score >= threshold:
-                best_score = score
-                best_match = correction
-        
-        return best_match, best_score
-    
     def correct_word(self, word, context="", page=0):
-        """Attempt to correct a single word"""
+        """
+        Correct a single word - ONLY exact matches
+        """
         original = word
+        
+        # Extract punctuation
         prefix = ""
         suffix = ""
+        punct = '.,;:!?"\'()[]'
         
-        # Extract leading punctuation
-        punct_chars = '.,;:!?"\'()[]'
-        while word and word[0] in punct_chars:
+        while word and word[0] in punct:
             prefix += word[0]
             word = word[1:]
         
-        # Extract trailing punctuation
-        while word and len(word) > 0 and word[-1] in punct_chars:
+        while word and len(word) > 0 and word[-1] in punct:
             suffix = word[-1] + suffix
             word = word[:-1]
         
         if not word:
             return original, False, None
         
-        correction, confidence = self.find_best_correction(word)
+        # Check for EXACT match only (case-insensitive lookup)
+        word_lower = word.lower()
         
-        if correction and correction.lower() != word.lower():
+        if word_lower in self.exact_corrections:
+            correction = self.exact_corrections[word_lower]
             corrected = prefix + correction + suffix
             
             log_entry = {
                 'page': page,
                 'original': original,
                 'corrected': corrected,
-                'confidence': round(confidence * 100, 1),
+                'confidence': 100.0,
                 'context': context,
-                'type': self._get_correction_type(word)
+                'type': 'exact_match'
             }
             
             self.correction_log.append(log_entry)
-            self.stats['corrections'] += 1
-            self.stats[log_entry['type']] += 1
+            self.stats['exact_corrections'] += 1
             
             return corrected, True, log_entry
         
         return original, False, None
     
-    def _get_correction_type(self, word):
-        """Determine the type of correction"""
-        word_lower = word.lower()
-        if word_lower in self.place_corrections:
-            return 'place_name'
-        elif word_lower in self.person_corrections:
-            return 'person_name'
-        elif word_lower in self.geological_corrections:
-            return 'geological_term'
-        elif word_lower in self.incomplete_corrections:
-            return 'incomplete_word'
-        return 'other'
-    
     def apply_phrase_corrections(self, text):
-        """Apply multi-word phrase corrections"""
+        """Fix hyphenated line-break words"""
         original = text
+        
         for wrong, correct in self.phrase_corrections.items():
             if wrong in text:
                 text = text.replace(wrong, correct)
@@ -267,44 +141,42 @@ class RomanianCorrector:
                     'corrected': correct,
                     'confidence': 100.0,
                     'context': '',
-                    'type': 'phrase'
+                    'type': 'phrase_fix'
                 })
+        
         return text
     
     def correct_text(self, text, page=0):
-        """Correct an entire text block"""
-        # First apply phrase corrections
+        """Correct text - phrases first, then exact word matches"""
+        
+        # 1. Fix hyphenated breaks
         text = self.apply_phrase_corrections(text)
         
-        # Split into words
+        # 2. Fix exact word matches only
         words = text.split()
         corrected_words = []
         
         for i, word in enumerate(words):
-            # Get context
             start = max(0, i - 3)
             end = min(len(words), i + 4)
             context = ' '.join(words[start:end])
             
-            corrected, was_changed, _ = self.correct_word(word, context, page)
+            corrected, _, _ = self.correct_word(word, context, page)
             corrected_words.append(corrected)
         
         return ' '.join(corrected_words)
     
     def get_correction_report(self):
-        """Generate a detailed markdown report of all corrections"""
-        
+        """Generate report"""
         lines = []
-        lines.append("# OCR Correction Report\n")
+        lines.append("# OCR Corrections Report (Conservative Mode)\n")
+        lines.append("Only EXACT matches of known OCR errors were corrected.\n")
         lines.append("## Summary\n")
-        lines.append("| Metric | Count |")
-        lines.append("|--------|-------|")
-        lines.append(f"| Total corrections | {self.stats['corrections']} |")
-        lines.append(f"| Place names | {self.stats.get('place_name', 0)} |")
-        lines.append(f"| Person names | {self.stats.get('person_name', 0)} |")
-        lines.append(f"| Geological terms | {self.stats.get('geological_term', 0)} |")
-        lines.append(f"| Incomplete words | {self.stats.get('incomplete_word', 0)} |")
-        lines.append(f"| Phrase fixes | {self.stats.get('phrase_corrections', 0)} |")
+        lines.append("| Type | Count |")
+        lines.append("|------|-------|")
+        lines.append(f"| Exact word fixes | {self.stats.get('exact_corrections', 0)} |")
+        lines.append(f"| Phrase/hyphen fixes | {self.stats.get('phrase_corrections', 0)} |")
+        lines.append(f"| **Total** | {len(self.correction_log)} |")
         lines.append("")
         
         if not self.correction_log:
@@ -316,53 +188,83 @@ class RomanianCorrector:
         for entry in self.correction_log:
             by_page[entry['page']].append(entry)
         
-        lines.append("## Corrections by Page\n")
+        lines.append("## All Corrections\n")
         
         for page in sorted(by_page.keys()):
-            lines.append(f"### Page {page}\n")
-            lines.append("| Original | Corrected | Type | Confidence |")
-            lines.append("|----------|-----------|------|------------|")
+            if page == 0:
+                lines.append("### Phrase Fixes (line breaks)\n")
+            else:
+                lines.append(f"### Page {page}\n")
+            
+            lines.append("| OCR Error | Fixed To | Type |")
+            lines.append("|-----------|----------|------|")
             
             for entry in by_page[page]:
                 orig = entry['original'].replace('|', '\\|')
                 corr = entry['corrected'].replace('|', '\\|')
-                lines.append(f"| `{orig}` | `{corr}` | {entry['type']} | {entry['confidence']}% |")
+                lines.append(f"| `{orig}` | `{corr}` | {entry['type']} |")
             
             lines.append("")
         
         return '\n'.join(lines)
     
     def reset(self):
-        """Reset correction tracking"""
+        """Reset tracking"""
         self.correction_log = []
         self.stats = defaultdict(int)
 
 
-# Quick test
+# Test
 if __name__ == "__main__":
     corrector = RomanianCorrector()
     
-    test_words = [
-        "Dimbovita",
-        "QOaransebes",
-        "Grigorasg",
-        "erystalline",
-        "hydroearbons",
-        "Ploiesti",
-        "Mrazeec",
-        "OI",
-        "GAs",
+    # Test words - mix of real errors and legitimate words
+    test_cases = [
+        # These SHOULD be corrected (OCR errors)
+        ("QOaransebes", True),
+        ("Grigorasg", True),
+        ("erystalline", True),
+        ("hydroearbons", True),
+        ("Mrazeec", True),
+        
+        # These should NOT be corrected (legitimate words)
+        ("deposits", False),
+        ("consists", False),
+        ("formations", False),
+        ("Carpathians", False),
+        ("geologists", False),
+        ("Transylvanian", False),
+        ("Moldavian", False),
+        ("natives", False),
+        ("content", False),
+        ("more", False),
+        ("beings", False),
+        ("old", False),
+        ("as", False),
     ]
     
     print("=" * 60)
-    print("ROMANIAN OCR CORRECTOR - TEST")
+    print("CONSERVATIVE OCR CORRECTOR - TEST")
     print("=" * 60)
     
-    for word in test_words:
-        corrected, changed, log = corrector.correct_word(word)
-        if changed:
-            print(f"  {word} -> {corrected}")
+    all_correct = True
+    for word, should_change in test_cases:
+        corrected, was_changed, _ = corrector.correct_word(word)
+        
+        status = ""
+        if was_changed == should_change:
+            if was_changed:
+                status = f"FIXED: {word} -> {corrected}"
+            else:
+                status = f"KEPT: {word} (correct)"
         else:
-            print(f"  {word} (no change)")
+            status = f"ERROR: {word} was {'changed' if was_changed else 'kept'} but should {'change' if should_change else 'stay'}"
+            all_correct = False
+        
+        print(f"  {status}")
     
-    print("\n" + corrector.get_correction_report())
+    print()
+    if all_correct:
+        print("All tests passed!")
+    else:
+        print("SOME TESTS FAILED - check above")
