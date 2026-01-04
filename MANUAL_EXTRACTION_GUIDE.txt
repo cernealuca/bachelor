@@ -1,0 +1,48 @@
+
+MANUAL FIELD EXTRACTION GUIDE
+==============================
+
+STEP 1: Open the PDF
+--------------------
+Open: c:\cod\licenta\Paraschiv 1979 - Ro oil _ gas fields STE_Seria_A_vol_13.pdf
+
+STEP 2: Find Table of Contents
+-------------------------------
+Look in the first 10-20 pages for:
+- "CUPRINS" (Contents in Romanian)
+- "TABLE OF CONTENTS"
+- "INDEX"
+- List of field names with page numbers
+
+STEP 3: Extract Field Data
+---------------------------
+For each field mentioned, write down:
+1. Field name (exact spelling)
+2. Geographic zone/platform (if mentioned)
+3. Page number where detailed info starts
+4. Any notes (production type: oil/gas, discovery year, etc.)
+
+STEP 4: Save to CSV
+--------------------
+Create file: c:\cod\licenta\manual_fields.csv
+
+Format:
+Field Name,Zone,Page,Notes
+Example 1,Moesian Platform,45,Oil field
+Example 2,Pre-Carpathian,67,Gas field
+
+STEP 5: Tell Me When Ready
+----------------------------
+Once you've extracted 20-50 fields, let me know!
+I'll add them to the knowledge graph.
+
+TARGET: 50-100 major fields (most important ones first)
+TIME: 1-2 hours for good coverage
+
+TIPS:
+-----
+- Focus on major/large fields first
+- Romanian characters: ă, â, î, ș, ț (important for accuracy!)
+- If unsure about zone, just put the field name
+- We can add more details later
+

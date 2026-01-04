@@ -1,0 +1,757 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="edge" attr.name="weight" attr.type="long"/>
+<key id="d4" for="edge" attr.name="relationship" attr.type="string"/>
+<key id="d3" for="node" attr.name="romanian_name" attr.type="string"/>
+<key id="d2" for="node" attr.name="mention_count" attr.type="long"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="zone:moesic">
+  <data key="d0">moesic</data>
+  <data key="d1">zone</data>
+  <data key="d2">24</data>
+</node>
+<node id="zone:moldoveneasc">
+  <data key="d0">moldoveneasc</data>
+  <data key="d1">zone</data>
+  <data key="d2">9</data>
+</node>
+<node id="zone:flisului">
+  <data key="d0">flisului</data>
+  <data key="d1">zone</data>
+  <data key="d2">6</data>
+</node>
+<node id="zone:neogen">
+  <data key="d0">neogen</data>
+  <data key="d1">zone</data>
+  <data key="d2">6</data>
+</node>
+<node id="zone:de apex">
+  <data key="d0">de apex</data>
+  <data key="d1">zone</data>
+  <data key="d2">5</data>
+</node>
+<node id="zone:moldovenease">
+  <data key="d0">moldovenease</data>
+  <data key="d1">zone</data>
+  <data key="d2">5</data>
+</node>
+<node id="zone:central">
+  <data key="d0">central</data>
+  <data key="d1">zone</data>
+  <data key="d2">5</data>
+</node>
+<node id="zone:continental">
+  <data key="d0">continental</data>
+  <data key="d1">zone</data>
+  <data key="d2">4</data>
+</node>
+<node id="zone:moldoveneascl">
+  <data key="d0">moldoveneascl</data>
+  <data key="d1">zone</data>
+  <data key="d2">3</data>
+</node>
+<node id="zone:moesicl">
+  <data key="d0">moesicl</data>
+  <data key="d1">zone</data>
+  <data key="d2">3</data>
+</node>
+<node id="zone:moesie">
+  <data key="d0">moesie</data>
+  <data key="d1">zone</data>
+  <data key="d2">3</data>
+</node>
+<node id="zone:seitied">
+  <data key="d0">seitied</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:moesiel">
+  <data key="d0">moesiel</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:scitied">
+  <data key="d0">scitied</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:moldove">
+  <data key="d0">moldove</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:seitie">
+  <data key="d0">seitie</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:flisului paleogen">
+  <data key="d0">flisului paleogen</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:Oligocenul">
+  <data key="d0">Oligocenul</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:cea mai ridicat">
+  <data key="d0">cea mai ridicat</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:Cercetarea">
+  <data key="d0">Cercetarea</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:axial">
+  <data key="d0">axial</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:moldoveneasci">
+  <data key="d0">moldoveneasci</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:seitic">
+  <data key="d0">seitic</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:moesicd">
+  <data key="d0">moesicd</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:citied">
+  <data key="d0">citied</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:moldoveneascd">
+  <data key="d0">moldoveneascd</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="substance:hydrocarbons">
+  <data key="d0">hydrocarbons</data>
+  <data key="d3">hidrocarburi</data>
+  <data key="d1">substance</data>
+  <data key="d2">247</data>
+</node>
+<node id="substance:oil">
+  <data key="d0">oil</data>
+  <data key="d3">petrol</data>
+  <data key="d1">substance</data>
+  <data key="d2">280</data>
+</node>
+<node id="age:Paleogene">
+  <data key="d0">Paleogene</data>
+  <data key="d3">paleogen</data>
+  <data key="d1">age</data>
+  <data key="d2">88</data>
+</node>
+<node id="age:Triassic">
+  <data key="d0">Triassic</data>
+  <data key="d3">triasic</data>
+  <data key="d1">age</data>
+  <data key="d2">94</data>
+</node>
+<node id="substance:gas">
+  <data key="d0">gas</data>
+  <data key="d3">gaz</data>
+  <data key="d1">substance</data>
+  <data key="d2">273</data>
+</node>
+<node id="basin:Transylvanian Basin">
+  <data key="d0">Transylvanian Basin</data>
+  <data key="d3">depresiunea transilvaniei</data>
+  <data key="d1">basin</data>
+  <data key="d2">18</data>
+</node>
+<node id="age:Cretaceous">
+  <data key="d0">Cretaceous</data>
+  <data key="d3">cretacic</data>
+  <data key="d1">age</data>
+  <data key="d2">131</data>
+</node>
+<node id="age:Neogene">
+  <data key="d0">Neogene</data>
+  <data key="d3">neogen</data>
+  <data key="d1">age</data>
+  <data key="d2">153</data>
+</node>
+<node id="age:Jurassic">
+  <data key="d0">Jurassic</data>
+  <data key="d3">jurasic</data>
+  <data key="d1">age</data>
+  <data key="d2">70</data>
+</node>
+<node id="rock:sands">
+  <data key="d0">sands</data>
+  <data key="d3">nisipuri</data>
+  <data key="d1">rock</data>
+  <data key="d2">126</data>
+</node>
+<node id="rock:shales">
+  <data key="d0">shales</data>
+  <data key="d3">argile</data>
+  <data key="d1">rock</data>
+  <data key="d2">90</data>
+</node>
+<node id="rock:dolomites">
+  <data key="d0">dolomites</data>
+  <data key="d3">dolomite</data>
+  <data key="d1">rock</data>
+  <data key="d2">56</data>
+</node>
+<node id="feature:reservoir">
+  <data key="d0">reservoir</data>
+  <data key="d3">rezervor</data>
+  <data key="d1">feature</data>
+  <data key="d2">68</data>
+</node>
+<node id="rock:sandstones">
+  <data key="d0">sandstones</data>
+  <data key="d3">gresii</data>
+  <data key="d1">rock</data>
+  <data key="d2">173</data>
+</node>
+<node id="rock:marls">
+  <data key="d0">marls</data>
+  <data key="d3">marne</data>
+  <data key="d1">rock</data>
+  <data key="d2">143</data>
+</node>
+<node id="rock:limestones">
+  <data key="d0">limestones</data>
+  <data key="d3">calcare</data>
+  <data key="d1">rock</data>
+  <data key="d2">130</data>
+</node>
+<node id="zone:estică">
+  <data key="d0">estică</data>
+  <data key="d1">zone</data>
+  <data key="d2">3</data>
+</node>
+<node id="zone:faciesului pelagic">
+  <data key="d0">faciesului pelagic</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:faciesului">
+  <data key="d0">faciesului</data>
+  <data key="d1">zone</data>
+  <data key="d2">2</data>
+</node>
+<node id="zone:Eastern Zone">
+  <data key="d0">Eastern Zone</data>
+  <data key="d3">zona estică</data>
+  <data key="d1">zone</data>
+  <data key="d2">5</data>
+</node>
+<node id="zone:Central Zone">
+  <data key="d0">Central Zone</data>
+  <data key="d3">zona centrală</data>
+  <data key="d1">zone</data>
+  <data key="d2">8</data>
+</node>
+<node id="zone:Western Zone">
+  <data key="d0">Western Zone</data>
+  <data key="d3">zona vestică</data>
+  <data key="d1">zone</data>
+  <data key="d2">4</data>
+</node>
+<node id="platform:Moldavian Platform">
+  <data key="d0">Moldavian Platform</data>
+  <data key="d3">platforma moldovenească</data>
+  <data key="d1">platform</data>
+  <data key="d2">2</data>
+</node>
+<node id="basin:Pre-Carpathian Depression">
+  <data key="d0">Pre-Carpathian Depression</data>
+  <data key="d3">depresiunea precarpatică</data>
+  <data key="d1">basin</data>
+  <data key="d2">2</data>
+</node>
+<node id="basin:Getic Depression">
+  <data key="d0">Getic Depression</data>
+  <data key="d3">depresiunea getică</data>
+  <data key="d1">basin</data>
+  <data key="d2">1</data>
+</node>
+<edge source="substance:hydrocarbons" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">61</data>
+</edge>
+<edge source="substance:hydrocarbons" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">54</data>
+</edge>
+<edge source="substance:hydrocarbons" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">11</data>
+</edge>
+<edge source="substance:oil" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">405</data>
+</edge>
+<edge source="substance:oil" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="age:Paleogene" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">17</data>
+</edge>
+<edge source="age:Paleogene" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="age:Paleogene" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">10</data>
+</edge>
+<edge source="age:Paleogene" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="age:Paleogene" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="age:Paleogene" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="age:Triassic" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">8</data>
+</edge>
+<edge source="age:Triassic" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">19</data>
+</edge>
+<edge source="age:Triassic" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">13</data>
+</edge>
+<edge source="age:Triassic" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="substance:gas" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">14</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">6</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="rock:limestones" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="rock:sandstones" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="rock:sands" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="rock:shales" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Transylvanian Basin" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="age:Cretaceous" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">28</data>
+</edge>
+<edge source="age:Cretaceous" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">15</data>
+</edge>
+<edge source="age:Cretaceous" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">30</data>
+</edge>
+<edge source="age:Cretaceous" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="age:Cretaceous" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="age:Cretaceous" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">18</data>
+</edge>
+<edge source="age:Neogene" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">18</data>
+</edge>
+<edge source="age:Neogene" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">23</data>
+</edge>
+<edge source="age:Neogene" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">11</data>
+</edge>
+<edge source="age:Neogene" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">21</data>
+</edge>
+<edge source="age:Neogene" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">8</data>
+</edge>
+<edge source="age:Neogene" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">12</data>
+</edge>
+<edge source="age:Neogene" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">11</data>
+</edge>
+<edge source="age:Neogene" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="age:Jurassic" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">27</data>
+</edge>
+<edge source="age:Jurassic" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="age:Jurassic" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="age:Jurassic" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="age:Jurassic" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:sands" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">15</data>
+</edge>
+<edge source="rock:sands" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">44</data>
+</edge>
+<edge source="rock:sands" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">6</data>
+</edge>
+<edge source="rock:sands" target="rock:shales" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">26</data>
+</edge>
+<edge source="rock:sands" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">8</data>
+</edge>
+<edge source="rock:sands" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:sands" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:sands" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:sands" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:shales" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="rock:shales" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:shales" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:shales" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="rock:shales" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">10</data>
+</edge>
+<edge source="rock:shales" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:shales" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:shales" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:shales" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:dolomites" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">15</data>
+</edge>
+<edge source="rock:dolomites" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:dolomites" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:dolomites" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:dolomites" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:dolomites" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">7</data>
+</edge>
+<edge source="rock:dolomites" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:dolomites" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:sandstones" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">10</data>
+</edge>
+<edge source="rock:sandstones" target="rock:limestones" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">95</data>
+</edge>
+<edge source="rock:sandstones" target="rock:marls" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">91</data>
+</edge>
+<edge source="rock:sandstones" target="rock:shales" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">70</data>
+</edge>
+<edge source="rock:sandstones" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:sandstones" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:sandstones" target="rock:sands" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">102</data>
+</edge>
+<edge source="rock:sandstones" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">12</data>
+</edge>
+<edge source="rock:sandstones" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">11</data>
+</edge>
+<edge source="rock:sandstones" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">16</data>
+</edge>
+<edge source="rock:sandstones" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">25</data>
+</edge>
+<edge source="rock:sandstones" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">7</data>
+</edge>
+<edge source="rock:sandstones" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">27</data>
+</edge>
+<edge source="rock:sandstones" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">20</data>
+</edge>
+<edge source="rock:marls" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">8</data>
+</edge>
+<edge source="rock:marls" target="rock:limestones" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">51</data>
+</edge>
+<edge source="rock:marls" target="rock:shales" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">49</data>
+</edge>
+<edge source="rock:marls" target="rock:sands" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">80</data>
+</edge>
+<edge source="rock:marls" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">4</data>
+</edge>
+<edge source="rock:marls" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">11</data>
+</edge>
+<edge source="rock:marls" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">20</data>
+</edge>
+<edge source="rock:marls" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:marls" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="rock:marls" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">6</data>
+</edge>
+<edge source="rock:marls" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">3</data>
+</edge>
+<edge source="rock:marls" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:marls" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="rock:limestones" target="rock:shales" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">38</data>
+</edge>
+<edge source="rock:limestones" target="age:Cretaceous" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">15</data>
+</edge>
+<edge source="rock:limestones" target="feature:reservoir" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="rock:limestones" target="age:Jurassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">8</data>
+</edge>
+<edge source="rock:limestones" target="rock:sands" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">21</data>
+</edge>
+<edge source="rock:limestones" target="rock:dolomites" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">57</data>
+</edge>
+<edge source="rock:limestones" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">20</data>
+</edge>
+<edge source="rock:limestones" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">6</data>
+</edge>
+<edge source="rock:limestones" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">5</data>
+</edge>
+<edge source="rock:limestones" target="substance:gas" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">9</data>
+</edge>
+<edge source="rock:limestones" target="age:Neogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="zone:Eastern Zone" target="zone:Central Zone" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="zone:Eastern Zone" target="zone:Western Zone" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="zone:Central Zone" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">2</data>
+</edge>
+<edge source="zone:Central Zone" target="zone:Western Zone" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="zone:Central Zone" target="substance:hydrocarbons" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="zone:Western Zone" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="zone:Western Zone" target="substance:oil" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="platform:Moldavian Platform" target="age:Paleogene" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+<edge source="basin:Pre-Carpathian Depression" target="age:Triassic" id="0">
+  <data key="d4">co_mentioned</data>
+  <data key="d5">1</data>
+</edge>
+</graph></graphml>
