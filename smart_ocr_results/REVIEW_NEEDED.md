@@ -1,72 +1,88 @@
-# 🔍 OCR Review Report
+# OCR Review Report
 
-**Generated:** 2026-01-04T22:27:30.146401
+**Generated:** 2026-01-04T22:38:00.682523
 
-**PDF:** `Paraschiv 1979 - Ro oil _ gas fields STE_Seria_A_vol_13.pdf`
+**PDF:** c:\cod\licenta\Paraschiv 1979 - Ro oil _ gas fields STE_Seria_A_vol_13.pdf
 
-## 📊 Summary
+## Summary
 
-| Metric | Value |
-|--------|-------|
-| Total pages | 5 |
-| Total words | 2,411 |
-| Low confidence words | 15 |
-| Pages needing review | 5 |
-| **Hallucination risk** | **0.6%** |
+- Total pages: 5
+- Total words: 2,439
+- Low confidence words: 93
+- **Hallucination risk: 3.8%**
 
-> ✅ **LOW RISK**: OCR quality is excellent!
-
-## ⚠️ Words Needing Review
+## ⚠ Pages Needing Review
 
 The following words have low OCR confidence and may be incorrect.
-Check the original PDF to verify. Words are shown **in bold** within context.
+Check the original PDF to verify.
 
-### 📄 Page 10
-
-| Word | Confidence | Context |
-|------|------------|----------|
-| `Dimbovita` | 42% | Trotuș and the **Dimbovita** ; the Getic |
-
-### 📄 Page 11
+### Page 10
 
 | Word | Confidence | Context |
 |------|------------|----------|
-| `Grigorasg` | 56% | given it by **Grigorasg** (1961). According to |
-| `QOaransebes,` | 36% | tioning: Beius, Mures, **QOaransebes,** Hateg, Petrosani, Brezoi-Titesti, |
-| `Triassic` | 41% | during the terminal **Triassic** and the Jurassic. |
+| `10*` | 36% | **10*** . - l |
+| `evolution` | 9% | beds arrangement and **evolution** of ‘the region. |
+| `bounded’` | 58% | South Carpathians are **bounded’** by the Dimbovita |
+| `consist` | 48% | the south-west. They **consist** of erystalline schists |
+| `there,` | 23% | and, here and **there,** Paleozoic non-metamorphosed or |
+| `Paleozoic` | 23% | here and there, **Paleozoic** non-metamorphosed or weakly |
+| `crystalline` | 33% | Mesozoic deposits. The **crystalline** for- mations and |
+| `for-` | 35% | deposits. The crystalline **for-** mations and the |
+| `are` | 38% | The South Carpathians **are** characterized by a |
+| `Mures` | 23% | north of the **Mures** Valley. They consists |
 
-### 📄 Page 12
-
-| Word | Confidence | Context |
-|------|------------|----------|
-| `“the` | 46% | would correspond to **“the** Scythian Platform” (Bogdanof |
-| `Platform”` | 0% | to “the Scythian **Platform”** (Bogdanof et al., |
-| `Bacău—Găiceana—` | 58% | the line S **Bacău—Găiceana—** Glăvăneşti — Birlad—Murgeni. |
-| `Glăvăneşti` | 48% | line S Bacău—Găiceana— **Glăvăneşti** — Birlad—Murgeni. This |
-| `‘Codex` | 2% | historic documents. Thus, **‘Codex** Bandinus” records that |
-| `‘Descriptio` | 48% | medicine. Later, in **‘Descriptio** Moldaviae”, Dimitrie Cantemir |
-
-### 📄 Page 13
+### Page 11
 
 | Word | Confidence | Context |
 |------|------------|----------|
-| `volcanoes` | 23% | kages, boilers, mud **volcanoes** or “pîcle”, tar |
-| `“pîcle”,` | 46% | mud volcanoes or **“pîcle”,** tar sands. The |
-| `“‘prospecting’’` | 49% | the activity of **“‘prospecting’’** and sinking by |
-| `volcanic` | 59% | depth during the **volcanic** eruptions ; the |
+| `Beius,` | 49% | men- tioning : **Beius,** Mures, Garansebes, Hateg, |
+| `““the` | 55% | “the Orogen”’ and **““the** North-Dobrogean Promon- tory” |
+| `Depression”?` | 0% | tory” ‘‘the Birlad **Depression”?** and the Danube |
+| `“progressively` | 0% | and eastwards being **“progressively** overlain by Neogene, |
+| `‘and,` | 51% | Jurassic, Triassic, Paleozoic **‘and,** probably, Precambrian deposits. |
 
-### 📄 Page 14
+### Page 12
 
 | Word | Confidence | Context |
 |------|------------|----------|
-| `mineral...”` | 0% | geology of this **mineral...”** (Preda, 1957, p. |
+| `bounded` | 39% | Romania. It is **bounded** by the Peceneaga—Camena |
+| `Moesian` | 45% | the north-east. The: **Moesian** Platform, . like |
+| `Sea-waters,.` | 55% | under the Black **Sea-waters,.** constituting a section |
+| `Depression,` | 11% | Depression, the Pannonian **Depression,** the Moldavian Platform, |
+| `the` | 11% | the Pannonian Depression, **the** Moldavian Platform, the |
+| `“mentioned` | 33% | within 'each : **“mentioned** structural unit will |
+| `FOR` | 42% | THE GEOLOGIOAL RESEARCHES **FOR** HYDROOARBONS IN ROMANIA |
+| `production.` | 30% | the first oil **production.** — 1977 barrels |
+| `Păcura.` | 51% | at Mosoare and **Păcura.** from which petroleum |
+| `‘Sarat` | 18% | on the Tazlăul **‘Sarat** banks. In 1837, |
 
----
+### Page 13
 
-## How to Use This Report
+| Word | Confidence | Context |
+|------|------------|----------|
+| `‘ROMANIAN` | 27% | **‘ROMANIAN** OI AND GAs |
+| `pump”` | 3% | ~ second. “oil **pump”** sprang up. ‘It, |
+| `is.` | 21% | of: other charters **is.** also considered, we |
+| `also` | 21% | other charters is. **also** considered, we come |
+| `“picle’,` | 14% | mud. voleanoes or **“picle’,** tar sands. The |
+| `needs-led` | 44% | the ever growing **needs-led** to the intensification |
+| `the` | 41% | be made of **the** fact that the |
+| `“prospectors”` | 0% | peasants, the first **“prospectors”** of the oil |
+| `deposits.` | 49% | of the oil **deposits.** The existence of |
+| `companies:from` | 3% | of the interested **companies:from** abroad and, consequently, |
 
-1. **Open the original PDF** alongside this report
-2. **Go to each page** listed in the review section
-3. **Find the suspicious word** using the context provided
-4. **Correct** any misread words in `extracted_text.txt`
-5. Words with confidence < 60% are most likely to need correction
+### Page 14
+
+| Word | Confidence | Context |
+|------|------------|----------|
+| `"D.` | 55% | 14 IE , **"D.** PARASCHIV After a |
+| `"problems` | 10% | as concerns the **"problems** connected to the |
+| `mineral...’` | 18% | geology of this **mineral...’** (P red a, |
+| `red` | 0% | this mineral...’ (P **red** a, 1957, p. |
+| `Mrazeec` | 28% | for hydrocarbons made **Mrazeec** colla- borate with |
+| `etal,` | 54% | for Transylvania (Ștefănescu **etal,** 1977). The activity |
+| `the` | 59% | having in view **the** clearing up of |
+| `and.` | 41% | of the zones **and.** the synthesis papers |
+| `the` | 41% | the zones and. **the** synthesis papers including |
+| `geology,` | 0% | with the petroleum **geology,** both as regards |
+
